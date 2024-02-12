@@ -58,9 +58,8 @@ export default function Hero() {
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
               <p className="mb-4 font-semibold uppercase text-xl text-purple-600">ReachOut starter kit</p>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Create dynamic web applications{" "}
-                <span className="text-purple-500 underline">faster</span>
+              <h1 className="text-4xl leading-14 font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Create dynamic web applications <span className="text-purple-500 underline">faster</span>
               </h1>
               <p className="relative mt-16 text-2xl leading-snug font-bold text-gray-600 sm:max-w-md lg:max-w-none">
                 The{" "}
