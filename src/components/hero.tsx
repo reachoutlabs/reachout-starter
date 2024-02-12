@@ -11,7 +11,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative isolate -z-10 py-16">
+    <div className="relative isolate py-16">
       <svg
         className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
         aria-hidden="true"
@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="mb-4 font-semibold uppercase text-xl text-purple-800">ReachOut starter kit</p>
+              <p className="mb-4 font-semibold uppercase text-xl text-purple-600">ReachOut starter kit</p>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Create dynamic web applications{" "}
                 <span className="text-purple-500 underline">faster</span>
@@ -92,12 +92,13 @@ export default function Hero() {
                 </ul>
               </p>
               <div className="flex grid-cols-2 gap-4 mt-8">
-                <Button className="bg-purple-600 h-12">
+                <Button asChild className="bg-purple-600 h-12">
                   <a
-                    href="https://reachoutapp.io"
-                    className="font-bold text-md"
+                    href="https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897"
+                    className="font-bold text-lg"
+                    target="_blank"
                   >
-                    Discover
+                    Buy PRO
                   </a>
                 </Button>
                 <Button className="bg-gray-800 h-12">

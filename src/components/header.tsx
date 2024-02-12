@@ -8,10 +8,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Resources", href: "#" },
-    { name: "Company", href: "#" },
+    { name: "Articles", href: "#" },
+    { name: "Features", href: "/#features" },
+    { name: "Github", href: "https://github.com/reachoutlabs/reachout-starter" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "ReachOut", href: "https://reachoutapp.io" },
   ];
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -52,10 +53,14 @@ export default function Header() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
+        <a href="#" className="text-sm font-bold leading-6 text-gray-900">
+        Sign up
           </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-500">
+            Log in
+          </a>
+          <span className="text-sm px-2.5 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">PRO</span>
         </div>
       </nav>
       <Dialog
