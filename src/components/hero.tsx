@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { GitBranch, Link } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Link } from "lucide-react";
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +46,7 @@ export default function Hero() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-purple-800 to-purple-600 opacity-30"
           style={{
             clipPath:
               "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
@@ -59,14 +59,29 @@ export default function Hero() {
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Create dynamic web applications{" "}
-                <span className="text-purple-500">faster</span>
+                <span className="text-purple-500 underline">faster</span>
               </h1>
-              <p className="relative mt-8 text-xl leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                The ReachOut starter kit is open source and free. Get started
-                with Next.js ISR, data fetching, ISR and user authentication
-                leveraging ReachOut for your content and marketing automations.
+              <p className="relative mt-16 text-2xl leading-snug font-bold text-gray-600 sm:max-w-md lg:max-w-none">
+                The{" "}
+                <span className="text-purple-500">ReachOut starter kit</span> is
+                open source and free
               </p>
-              <div className="flex grid-cols-2 gap-4 mt-8">
+              <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
+                Features
+              </h2>
+              <p className="relative mt-8 text-lg leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid grid-cols-2">
+                  <li>&bull; Next.js 14</li>
+                  <li>&bull; ISR for content pages</li>
+                  <li>&bull; Data fetching with typing</li>
+                  <li>&bull; Web and email analytics</li>
+                  <li>&bull; Triggered and newsletter emails</li>
+                  <li>&bull; Payments with Lemonsqueezy</li>
+                  <li>&bull; User authentication</li>
+                  <li>&bull; ReachOut backend</li>
+                </ul>
+              </p>
+              <div className="flex grid-cols-2 gap-4 mt-16">
                 <Button className="bg-purple-600 h-12">
                   <a
                     href="https://reachoutapp.io"
@@ -84,9 +99,11 @@ export default function Hero() {
             <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
               <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
+                  <Image
+                    src="/ilmanifesto-global2.png"
+                    alt="il manifesto global"
+                    width={528}
+                    height={792}
                     className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -94,17 +111,21 @@ export default function Hero() {
               </div>
               <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
+                  <Image
+                    src="/tuttoimmobili.png"
+                    alt="tuttoimmobili.ch"
+                    width={528}
+                    height={792}
                     className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                 </div>
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
-                    alt=""
+                  <Image
+                    src="/reachoutapp.png"
+                    alt="reachout"
+                    width={528}
+                    height={792}
                     className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -112,17 +133,21 @@ export default function Hero() {
               </div>
               <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
-                    alt=""
+                  <Image
+                    src="/repeople.png"
+                    alt="repeople"
+                    width={528}
+                    height={792}
                     className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                 </div>
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                    alt=""
+                  <Image
+                    src="/ilmanifesto.png"
+                    alt="il manifesto"
+                    width={528}
+                    height={792}
                     className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
