@@ -1,52 +1,52 @@
 import {
-  ArrowPathIcon,
+  ClipboardDocumentListIcon,
   CloudArrowUpIcon,
-  LockClosedIcon,
+  CircleStackIcon,
 } from "@heroicons/react/20/solid";
+import Link from 'next/link';
 
 const features = [
   {
-    name: "Push to deploy",
+    name: "Deploy anywhere",
     description:
-      "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
+      "Build the starter kit and deploy on Vercel, Netlify, Cloudflare Pages or Node.js.",
     href: "#",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates",
+    name: "Style with Tailwind",
     description:
-      "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+      "Customize styles and add components with TailwindCSS and shadcn/ui.",
     href: "#",
-    icon: LockClosedIcon,
+    icon: ClipboardDocumentListIcon,
   },
   {
-    name: "Simple queues",
+    name: "Fetch data",
     description:
-      "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
+      "The ReachOut SDK is pre-configured with sample data. Sign up to set up your CMS with your data.",
     href: "#",
-    icon: ArrowPathIcon,
+    icon: CircleStackIcon,
   },
 ];
 
 export default function PrimaryFeatures() {
   return (
     <section id="features">
-      <div className="bg-white pt-32">
+      <div className="bg-white pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-purple-600">
+          <div className="mx-auto max-w-6xl lg:text-center">
+            <h2 className="text-lg font-bold leading-7 uppercase text-purple-600">
               Deploy faster
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Everything you need to deploy your app
+              Launch a content website in hours, not weeks
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+              The ReachOut starter kit for Next.js 14 is pre-configured with the ReachOut SDK, Auth.js, Zod, TailwindCSS and shadcn/ui components.
+              Customize the starter kit connecting your services, or sign up for a <Link href="https://app.reachoutapp.io/signup" className="text-purple-600 underline">ReachOut account</Link> to instantly access our headless CMS, email sending system, web analytics and automations.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {features.map((feature) => (
                 <div key={feature.name} className="flex flex-col">
@@ -59,14 +59,6 @@ export default function PrimaryFeatures() {
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                     <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm font-semibold leading-6 text-purple-600"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
                   </dd>
                 </div>
               ))}

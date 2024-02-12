@@ -3,11 +3,30 @@ import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is the pricing of ReachOut?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "You can create unlimited clients, brands, campaigns and touch points. ReachOut hosts unlimited data and assets in the CMS database. Email credits never expire and can be purchased any time. Web analytics start at $9 / month for 20,000 pageviews.",
   },
-  // More questions...
+  {
+    question: "Do you offer larger plans?",
+    answer:
+      "ReachOut can scale to hundred million pageviews and emails. Get in touch with support to discuss web analytics plans over 500k or to purchase larger email credits packages.",
+  },
+  {
+    question: "Do you offer a custom, Enterprise plan?",
+    answer:
+      "ReachOut's unique technology allows to deploy a marketing database, CMS and API on-premises or a private cloud. Get in touch with support to discuss a custom deployment.",
+  },
+  {
+    question: "What is the pricing of ReachOut?",
+    answer:
+      "You can create unlimited clients, brands, campaigns and touch points. ReachOut hosts unlimited data and assets in the CMS database. Email credits never expire and can be purchased any time. Web analytics start at $9 / month for 20,000 pageviews.",
+  },
+  {
+    question: "Can you help with building email and web campaigns?",
+    answer:
+      "ReachOut is a powerful and flexible marketing automation platform that allows to create complex campaigns and user journeys. ReachOut Marketing, starting at $1,495 / month, is our campaign implementation service built on ReachOut.",
+  },
 ]
 
 export default function Faq() {

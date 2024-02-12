@@ -35,8 +35,8 @@ export default function Home() {
       <LogoCloud />
       <BlogFeatured />
       <BlogList />
-      <NewsletterSignup />
       <Values />
+      <NewsletterSignup />
       <PrimaryFeatures />
       <SecondaryFeatures />
       <GettingStarted />

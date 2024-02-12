@@ -2,32 +2,32 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const tiers = [
   {
-    name: "Hobby",
-    id: "tier-hobby",
+    name: "Web",
+    id: "web",
     href: "#",
-    priceMonthly: "$49",
+    priceMonthly: "from $9",
     description:
-      "Modi dolorem expedita deleniti. Corporis iste qui inventore pariatur adipisci vitae.",
+      "Track website visits, identify users, trigger events, fetch data and personalize pages.",
     features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
+      "Unlimited data hosting",
+      "Unlimited CMS tables",
+      "Recipient-level analytics",
+      "First-party library",
+      "Lightweight React and JS versions",
     ],
   },
   {
-    name: "Team",
-    id: "tier-team",
+    name: "Email",
+    id: "email",
     href: "#",
-    priceMonthly: "$79",
+    priceMonthly: "from $59",
     description:
-      "Explicabo quo fugit vel facere ullam corrupti non dolores. Expedita eius sit sequi.",
+      "Automate triggered emails, create newsletter campaigns, send mass emails to user segments.",
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "1-hour, dedicated support response time",
-      "Marketing automations",
+      "DKIM, SPF and DMARC",
+      "High deliverability",
+      "Email analytics",
+      "Secure and privacy-first user tracking",
     ],
   },
 ];
@@ -38,19 +38,17 @@ export default function Pricing() {
       <div className="isolate overflow-hidden bg-gray-900">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-base font-semibold leading-7 text-indigo-400">
-              Pricing
+            <h2 className="text-lg font-bold leading-7 uppercase text-purple-600">
+              ReachOut Pricing
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              The right price for you,{" "}
-              <br className="hidden sm:inline lg:hidden" />
-              whoever you are
+              Web and email volume pricing
             </p>
           </div>
           <div className="relative mt-6">
             <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              numquam eligendi quos odit doloribus molestiae voluptatum.
+              ReachOut starter kit is free to use forever.<br />
+              PRO is a $149 lifetime purchase.
             </p>
             <svg
               viewBox="0 0 1208 1024"
@@ -84,7 +82,7 @@ export default function Pricing() {
                     <div>
                       <h3
                         id={tier.id}
-                        className="text-base font-semibold leading-7 text-indigo-600"
+                        className="text-base font-semibold leading-7 text-purple-600"
                       >
                         {tier.name}
                       </h3>
@@ -106,7 +104,7 @@ export default function Pricing() {
                         {tier.features.map((feature) => (
                           <li key={feature} className="flex gap-x-3">
                             <CheckIcon
-                              className="h-6 w-5 flex-none text-indigo-600"
+                              className="h-6 w-5 flex-none text-purple-600"
                               aria-hidden="true"
                             />
                             {feature}
@@ -115,9 +113,10 @@ export default function Pricing() {
                       </ul>
                     </div>
                     <a
-                      href={tier.href}
+                      href="https://app.reachoutapp.io/signup"
+                      target="_blank"
                       aria-describedby={tier.id}
-                      className="mt-8 block rounded-md bg-indigo-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="mt-8 block rounded-md bg-purple-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
                     >
                       Get started today
                     </a>
@@ -125,19 +124,18 @@ export default function Pricing() {
                 ))}
                 <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
                   <div className="lg:min-w-0 lg:flex-1">
-                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">
-                      Discounted
+                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-purple-600">
+                      Enterprise
                     </h3>
                     <p className="mt-1 text-base leading-7 text-gray-600">
-                      Dolor dolores repudiandae doloribus. Rerum sunt aut eum.
-                      Odit omnis non voluptatem sunt eos nostrum.
+                      Deploy the ReachOut CMS and database on-premises or dedicated servers. Retain administrative access to your content and user data. Connect BI tools such as Metabase. Starting at $1,000 / month.
                     </p>
                   </div>
                   <a
-                    href="#"
-                    className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    href="mailto:enterprise@reachoutapp.io"
+                    className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-purple-600 ring-1 ring-inset ring-purple-200 hover:ring-purple-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
                   >
-                    Buy discounted license{" "}
+                    Enquire{" "}
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
