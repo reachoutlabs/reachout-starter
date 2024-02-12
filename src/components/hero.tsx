@@ -11,7 +11,7 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative isolate -z-10">
+    <div className="relative isolate -z-10 py-16">
       <svg
         className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
         aria-hidden="true"
@@ -69,19 +69,29 @@ export default function Hero() {
               <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
                 Features
               </h2>
-              <p className="relative mt-8 text-lg leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
+              <p className="relative mt-8 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
                 <ul className="font-regular grid grid-cols-2 leading-9">
                   <li>&bull; Next.js 14</li>
-                  <li>&bull; ISR for content pages</li>
-                  <li>&bull; Data fetching with typing</li>
-                  <li>&bull; Web and email analytics</li>
-                  <li>&bull; Triggered and newsletter emails</li>
-                  <li><span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mr-2">PRO</span>Payments with Lemonsqueezy</li>
-                  <li><span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mr-2">PRO</span>User authentication</li>
-                  <li>&bull; ReachOut backend</li>
+                  <li>&bull; App routing and ISR</li>
+                  <li>&bull; Data fetching and data schema validation</li>
+                  <li>&bull; Newsletter signup</li>
+                  <li>&bull; Payments<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>&bull; User authentication<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>&bull; Content paywall<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
                 </ul>
               </p>
-              <div className="flex grid-cols-2 gap-4 mt-16">
+              <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
+                ReachOut integration
+              </h2>
+              <p className="relative mt-8 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid grid-cols-2 leading-9">
+                  <li>&bull; Web and email analytics</li>
+                  <li>&bull; Headless CMS</li>
+                  <li>&bull; Forms</li>
+                  <li>&bull; User management</li>
+                </ul>
+              </p>
+              <div className="flex grid-cols-2 gap-4 mt-8">
                 <Button className="bg-purple-600 h-12">
                   <a
                     href="https://reachoutapp.io"

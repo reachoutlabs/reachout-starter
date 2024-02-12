@@ -15,6 +15,7 @@ import SecondaryFeatures from '@/components/secondaryFeatures'
 import NewsletterSignup from '@/components/newsletterSignup'
 import Pricing from '@/components/pricing'
 import Faq from '@/components/faq'
+import GettingStarted from '@/components/gettingStarted'
 
 const stats = [
   { label: 'Transactions every 24 hours', value: '44 million' },
@@ -29,7 +30,6 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Header />
-      
       <main className="isolate">
       <Hero />
       <LogoCloud />
@@ -39,6 +39,7 @@ export default function Home() {
       <Values />
       <PrimaryFeatures />
       <SecondaryFeatures />
+      <GettingStarted />
       <Pricing />
       <Faq />
       <Footer />
