@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ReachOut Next.js boilerplate
+## A Next.js 14 starter template for dynamic content web applications
+[ReachOut](https://reachoutapp.io) Next.js boilerplate is a free website starter template to deploy Next.js apps for marketing and content publishing. It is built with Next.js 14.1 and can be deployed to any hosting including Vercel which we recommend for ISR on-demand revalidation.
 
-## Getting Started
+ReachOut is a platform that connects a dedicated marketing and content PostgreSQL database to multiple websites and email endpoints for dynamic content, analytics, tracking and more. It also provides a headless CMS that exposes all the content collections to a RestAPI.
 
-First, run the development server:
+The ReachOut Next.js boilerplate is the free starting point to build any content and dynamic web app on ReachOut. It can be styled, extended and implemented freely using the ReachOut SDK to fetch data from the ReachOut platform, or it can be easily converted to use any ORM like Prisma.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ReachOut Next.js starter template features
+This template is provided as it is and it's free to use.
+It is pre-configured and comes with an integration to ReachOut to quickly get started.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit the [demo website](https://starter.reachoutapp.io).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Features
+- Next.js 14.1
+- ISR on-demand revalidation with ReachOut endpoint on content update
+- ReachOut SDK configuration and set up to track pageviews, identify recipients, track events and perform data fetching from the ReachOut CMS
+- Next.js Image optimization
+- Automatic sitemap generation
+- SEO optimizations: meta titles, descriptions, keywords, dynamic page titles
+- TailwindCSS
+- shadcn/ui for components library
+- react email for email template generation in Next.js
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Getting started
+1. Fork this starter kit and open up in Code
+2. .env.local are environment variables to our demo app build. Copy the values to .env.local to build a dev preview
+3. Run pnpm install
+4. Run pnpm dev
+5. Visit http://localhost:3000 to display the preview website in your browser
 
-## Learn More
+## Getting started with ReachOut
+Visit the [ReachOut website](https://reachoutapp.io) for information and sign-up for a free account at [https://app.reachoutapp.io/signup].
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Create an organization and set up a payment method. Your dedicated infrastructure including PostgreSQL will be deployed for you. ReachOut is free to use forever and to keep your data in. Web views and emails sent are [billed](https://reachoutapp.io/#pricing) based on volume.
