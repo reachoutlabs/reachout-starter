@@ -16,8 +16,9 @@ export default function NewsletterSignup() {
     return (
       <div className="bg-purple-800 py-16 sm:py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
-          <div className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:col-span-7">
-            <h2 className="inline sm:block lg:inline xl:block">Receive product updates in your inbox</h2>
+          <div className="max-w-xl lg:col-span-7">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl inline sm:block lg:inline xl:block">Product updates in your inbox</h2>
+            <p className="mt-4 text-gray-200 text-lg">Subscribe to our newsletter for 20% off our PRO starter kit</p>
           </div>
           <form className="w-full max-w-md lg:col-span-5 lg:pt-2">
             <div className="flex gap-x-4">

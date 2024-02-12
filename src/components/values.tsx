@@ -7,34 +7,34 @@ import Image from "next/image";
 export default function Values() {
   const values = [
     {
-      name: "Flexible",
+      name: "Flexibility",
       description:
-        "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.",
+        "We have worked with customers of any size and understand things change. We built solutions that adapt to changing needs and scope.",
     },
     {
-      name: "Composable",
+      name: "Integration options",
       description:
-        "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.",
+        "Almost no organization works with one single application or data source. Connecting multiple streams with APIs and building integrations is our bread and butter.",
     },
     {
-      name: "Secure",
+      name: "Security",
       description:
-        "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.",
+        "ReachOut was built after GDPR came into effect and marketing experiences deserve the maximum security. We put data safety first building privacy by design solutions.",
     },
     {
-      name: "Automated",
+      name: "Automations",
       description:
-        "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.",
+        "Marketing and content publishing require advanced personalization and relevant messaging. ReachOut automations are easy to configure and test.",
     },
     {
-      name: "Agile",
+      name: "Agility",
       description:
-        "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+        "Every marketer knows that testing assumptions and iterating is the only way forward so we made launching a new content website easy and fast with our starter kit and pre-configured CMS data schema.",
     },
     {
-      name: "Data-based",
+      name: "Data first",
       description:
-        "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.",
+        "Building dynamic and personalized websites can be hard, so we have built a platform that maximize the user and content visibility and management options.",
     },
   ];
 
