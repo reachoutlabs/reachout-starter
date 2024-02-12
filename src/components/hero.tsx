@@ -57,27 +57,27 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+              <p className="mb-4 font-semibold uppercase text-xl text-purple-800">ReachOut starter kit</p>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Create dynamic web applications{" "}
                 <span className="text-purple-500 underline">faster</span>
               </h1>
               <p className="relative mt-16 text-2xl leading-snug font-bold text-gray-600 sm:max-w-md lg:max-w-none">
                 The{" "}
-                <span className="text-purple-500">ReachOut starter kit</span> is
-                open source and free
+                <span className="text-purple-500">Next.js starter kit</span> for content and marketing sites
               </p>
               <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
                 Features
               </h2>
               <p className="relative mt-8 text-lg leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                <ul className="font-regular grid grid-cols-2">
+                <ul className="font-regular grid grid-cols-2 leading-9">
                   <li>&bull; Next.js 14</li>
                   <li>&bull; ISR for content pages</li>
                   <li>&bull; Data fetching with typing</li>
                   <li>&bull; Web and email analytics</li>
                   <li>&bull; Triggered and newsletter emails</li>
-                  <li>&bull; Payments with Lemonsqueezy</li>
-                  <li>&bull; User authentication</li>
+                  <li><span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mr-2">PRO</span>Payments with Lemonsqueezy</li>
+                  <li><span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mr-2">PRO</span>User authentication</li>
                   <li>&bull; ReachOut backend</li>
                 </ul>
               </p>
