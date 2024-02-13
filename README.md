@@ -23,6 +23,13 @@ Visit the [demo website](https://starter.reachoutapp.io).
 - shadcn/ui for components library
 - react email for email template generation in Next.js
 
+### PRO features
+- Content paywall
+- Lemonsqueezy integration
+- User authentication with Auth.js
+
+Join the [waiting list](https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897) to get 20% off the ReachOut starter kit PRO - regular price $149 - to be the first to get a private purchase and download link.
+
 # Getting started
 1. Fork this starter kit and open up in Code
 2. .env.local are environment variables to our demo app build. Copy the values to .env.local to build a dev preview
@@ -32,6 +39,3 @@ Visit the [demo website](https://starter.reachoutapp.io).
 
 ## Getting started with ReachOut
 Visit the [ReachOut website](https://reachoutapp.io) for information and sign-up for a free account at [https://app.reachoutapp.io/signup].
-
-## PRO starter kit
-Join the waiting list to get 20% off the ReachOut starter kit PRO - regular price $149 - to be the first to get a private purchase and download link.
