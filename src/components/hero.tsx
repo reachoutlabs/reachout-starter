@@ -1,11 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -92,17 +90,19 @@ export default function Hero() {
               </p>
               <div className="flex grid-cols-2 gap-4 mt-8">
                 <Button asChild className="bg-purple-600 h-12">
-                  <a
+                  <Link
                     href="https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897"
                     className="font-bold text-lg"
                     target="_blank"
                   >
                     PRO waiting list
-                  </a>
+                  </Link>
                 </Button>
-                <Button className="bg-gray-800 h-12">
+                <Button asChild className="bg-gray-800 h-12">
+                  <Link href="https://github.com/reachoutlabs/reachout-starter" target="_blank">
                   <GitHubLogoIcon className="mr-4" />
                   Github
+                  </Link>
                 </Button>
               </div>
             </div>
