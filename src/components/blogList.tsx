@@ -45,7 +45,7 @@ export default function BlogList() {
           {posts.slice(0, 3).map((post) => (
             <article
               key={post.id}
-              className="flex flex-col items-start justify-between"
+              className="flex flex-col items-start justify-top"
             >
               <div className="relative w-full">
                 <img
