@@ -71,7 +71,7 @@ export default function Hero() {
               <p className="relative mt-8 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
                 <ul className="font-regular grid grid-cols-2 leading-9">
                   <li>&bull; Next.js 14</li>
-                  <li>&bull; App routing and ISR</li>
+                  <li>&bull; ISR for content pages</li>
                   <li>&bull; Data fetching and data schema validation</li>
                   <li>&bull; Newsletter signup</li>
                   <li>&bull; Payments<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
@@ -97,7 +97,7 @@ export default function Hero() {
                     className="font-bold text-lg"
                     target="_blank"
                   >
-                    Request access
+                    PRO waiting list
                   </a>
                 </Button>
                 <Button className="bg-gray-800 h-12">
