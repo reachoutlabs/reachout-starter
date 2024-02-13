@@ -3,15 +3,16 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Articles", href: "#" },
-    { name: "Features", href: "/#features" },
+    { name: "Articles", href: "/articles" },
+    { name: "Case studies", href: "/case-studies" },
     { name: "Github", href: "https://github.com/reachoutlabs/reachout-starter" },
-    { name: "Pricing", href: "/#pricing" },
+    { name: "ReachOut pricing", href: "/#pricing" },
     { name: "ReachOut", href: "https://reachoutapp.io" },
   ];
   return (
@@ -21,7 +22,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image
               className="h-16 w-auto"
@@ -30,7 +31,7 @@ export default function Header() {
               width={160}
               height={160}
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button

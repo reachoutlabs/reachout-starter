@@ -4,26 +4,26 @@ export default function BlogFeatured() {
   const blogPosts = [
     {
       id: 1,
-      headline: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+      headline: "How to improve your email marketing conversion rate",
       href: "#",
-      kicker: "kicker",
+      kicker: "email marketing",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        "Studies show highly personalized email marketing leads to higher conversions. But you need a platform that lets you create relevant targeted content at scale. Learn how with our step-by-step guide.",
       featuredImage:
-        "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-      publishedDate: "2020-03-16",
-      author: "Michael Foster",
+        "/improve-email-conversions.jpg",
+      publishedDate: "2023-11-16",
+      author: "Lars Kerles",
     },
     {
       id: 2,
-      headline: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+      headline: "When privacy-respecting means giving out control and letting the majors win",
       href: "#",
-      kicker: "kicker",
+      kicker: "data privacy",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        "The new privacy-respecting analytics are important but by removing the tools that small-medium businesses can rely on for content relevancy, personalization, timely communication and customer support, we are letting big tech win the battle.",
       featuredImage:
-        "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-      publishedDate: "2020-03-16",
+        "/privacy.webp",
+      publishedDate: "2023-10-22",
       author: "Michael Foster",
     },
   ];
@@ -64,7 +64,7 @@ export default function BlogFeatured() {
                 >
                   <circle cx={1} cy={1} r={1} />
                 </svg>
-                {post.kicker}
+                <span className="uppercase">{post.kicker}</span>
               </div>
             </div>
             <h3 className="mt-3 text-2xl font-semibold leading-snug text-white">

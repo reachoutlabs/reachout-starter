@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import BlogFeatured from "@/components/blogFeatured";
@@ -18,7 +17,6 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <Header />
       <main className="isolate">
         <Hero />
         <LogoCloud />
@@ -31,7 +29,6 @@ export default function Home() {
         <GettingStarted />
         <Pricing />
         <Faq />
-        <Footer />
       </main>
     </div>
   );

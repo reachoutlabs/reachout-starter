@@ -1,40 +1,37 @@
-import Link from "next/link" 
-import { Button } from "@/components/ui/button"
-
 const posts = [
   {
     id: 1,
-    headline: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+    headline: "We are building a marketing platform for developers",
     href: "#",
-    kicker: "kicker",
+    kicker: "vision",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "ReachOut is a marketing automation platform built to improve developer experience. With more than 10 years of experience building large-scale marketing applications, we have developed tools and technologies to improve speed to market in one robust, privacy-respecting platform.",
     featuredImage:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    publishedDate: "2020-03-16",
-    author: "Michael Foster",
+      "/marketing-platform.webp",
+    publishedDate: "2024-01-09",
+    author: "Stephen Fawlerr",
   },
   {
     id: 2,
-    headline: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+    headline: "The ugly truth about visual email editors",
     href: "#",
-    kicker: "kicker",
+    kicker: "email marketing",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "A visual email editor and a good template can help a lot to strike a creative output and consistent design. When doing a lot of email marketing or newsletter publishing the inconvenience of mixing layout and content becomes more obvious, yet a solution exists.",
     featuredImage:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    publishedDate: "2020-03-16",
+      "/visual-editors.webp",
+    publishedDate: "2023-06-24",
     author: "Michael Foster",
   },
   {
     id: 3,
-    headline: "Vel expedita assumenda placeat aut nisi optio voluptates quas",
+    headline: "What are the best Google Analytics alternatives for digital marketing",
     href: "#",
-    kicker: "kicker",
+    kicker: "data privacy",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "It is now a good time to evaluate privacy respecting web analytics tools. With many Google Analytics alternatives available, the right choice now can go a long way in the future. Personalized marketing is growing in popularity as marketers experiment with more personal and relevant messaging to gain trust and show compliant data handling.",
     featuredImage:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      "/analytics.webp",
     publishedDate: "2020-03-16",
     author: "Michael Foster",
   },
@@ -42,7 +39,7 @@ const posts = [
 
 export default function BlogList() {
   return (
-    <div className="bg-white mb-16">
+    <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.slice(0, 3).map((post) => (
