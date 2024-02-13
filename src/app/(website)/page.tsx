@@ -12,6 +12,7 @@ import NewsletterSignup from "@/components/newsletterSignup";
 import Pricing from "@/components/pricing";
 import Faq from "@/components/faq";
 import GettingStarted from "@/components/gettingStarted";
+import CaseStudiesHomeList from "@/components/caseStudies";
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
         <BlogFeatured />
         <BlogList />
         <Values />
+        <CaseStudiesHomeList />
         <NewsletterSignup />
         <PrimaryFeatures />
         <SecondaryFeatures />

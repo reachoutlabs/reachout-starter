@@ -9,38 +9,38 @@ export default function Values() {
     {
       name: "Flexibility",
       description:
-        "We have worked with customers of any size and understand things change. We built solutions that adapt to changing needs and scope.",
+        "We build web applications that adapt to changing needs and scope.",
     },
     {
-      name: "Integration options",
+      name: "Integration",
       description:
-        "Almost no organization works with one single application or data source. Connecting multiple streams with APIs and building integrations is our bread and butter.",
+        "Connecting multiple  data streams with APIs and building integrations is our bread and butter.",
     },
     {
-      name: "Security",
+      name: "Data privacy",
       description:
-        "ReachOut was built after GDPR came into effect and marketing experiences deserve the maximum security. We put data safety first building privacy by design solutions.",
+        "We put data privacy first and build secure solutions to host the most sensitive data.",
     },
     {
       name: "Automations",
       description:
-        "Marketing and content publishing require advanced personalization and relevant messaging. ReachOut automations are easy to configure and test.",
+        "ReachOut automations are easy to configure, test and adapt to changing needs.",
     },
     {
       name: "Agility",
       description:
-        "Every marketer knows that testing assumptions and iterating is the only way forward so we made launching a new content website easy and fast with our starter kit and pre-configured CMS data schema.",
+        "We male launching new content websites easy and fast with our starter kit and pre-configured CMS data schema.",
     },
     {
-      name: "Data first",
+      name: "Content is king",
       description:
-        "Building dynamic and personalized websites can be hard, so we have built a platform that maximize the user and content visibility and management options.",
+        "We have built a platform that empowers users to easily manage, import and edit content.",
     },
   ];
 
   return (
     <div className="mx-auto my-16 max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto max-w-2xl lg:mx-0">
+      <div className="mx-auto max-w-4xl lg:mx-0">
         <hr></hr>
         <h2 className="mt-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Our values
@@ -57,6 +57,9 @@ export default function Values() {
           </div>
         ))}
       </dl>
+      <div className="max-w-4xl mt-16">
+      <hr></hr>
+      </div>
     </div>
   );
 }
