@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="mb-4 font-semibold uppercase text-xl text-purple-600">ReachOut starter kit</p>
+              <p className="mb-4 font-semibold uppercase text-xl text-purple-600"><span className="text-sm rounded-full bg-purple-600 px-3 py-2 font-medium text-white hover:bg-purple-300 uppercase mx-2">beta</span> ReachOut starter kit</p>
               <h1 className="text-4xl leading-14 font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Create dynamic web applications <span className="text-purple-500 underline">faster</span>
               </h1>
@@ -74,9 +74,9 @@ export default function Hero() {
                   <li>&bull; App routing and ISR</li>
                   <li>&bull; Data fetching and data schema validation</li>
                   <li>&bull; Newsletter signup</li>
-                  <li>&bull; Payments<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
-                  <li>&bull; User authentication<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
-                  <li>&bull; Content paywall<span className="rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>&bull; Payments<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>&bull; User authentication<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>&bull; Content paywall<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
                 </ul>
               </p>
               <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
@@ -97,7 +97,7 @@ export default function Hero() {
                     className="font-bold text-lg"
                     target="_blank"
                   >
-                    Buy PRO
+                    Request access
                   </a>
                 </Button>
                 <Button className="bg-gray-800 h-12">

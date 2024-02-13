@@ -1,4 +1,4 @@
-# ReachOut Next.js boilerplate
+# ReachOut Next.js boilerplate BETA
 ## A Next.js 14 starter template for dynamic content web applications
 [ReachOut](https://reachoutapp.io) Next.js boilerplate is a free website starter template to deploy Next.js apps for marketing and content publishing. It is built with Next.js 14.1 and can be deployed to any hosting including Vercel which we recommend for ISR on-demand revalidation.
 
@@ -18,7 +18,7 @@ Visit the [demo website](https://starter.reachoutapp.io).
 - ReachOut SDK configuration and set up to track pageviews, identify recipients, track events and perform data fetching from the ReachOut CMS
 - Next.js Image optimization
 - Automatic sitemap generation
-- SEO optimizations: meta titles, descriptions, keywords, dynamic page titles
+- SEO optimization: meta titles, descriptions, keywords, dynamic page titles
 - TailwindCSS
 - shadcn/ui for components library
 - react email for email template generation in Next.js
@@ -33,4 +33,5 @@ Visit the [demo website](https://starter.reachoutapp.io).
 ## Getting started with ReachOut
 Visit the [ReachOut website](https://reachoutapp.io) for information and sign-up for a free account at [https://app.reachoutapp.io/signup].
 
-Create an organization and set up a payment method. Your dedicated infrastructure including PostgreSQL will be deployed for you. ReachOut is free to use forever and to keep your data in. Web views and emails sent are [billed](https://reachoutapp.io/#pricing) based on volume.
+## PRO starter kit
+Join the waiting list to get 20% off the ReachOut starter kit PRO - regular price $149 - to be the first to get a private purchase and download link.

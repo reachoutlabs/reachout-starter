@@ -60,7 +60,7 @@ export default function Header() {
           <a href="#" className="text-sm font-semibold leading-6 text-gray-500">
             Log in
           </a>
-          <span className="text-sm px-3 py-1 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">PRO</span>
+          <span className="text-sm px-2 py-1 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">PRO</span>
         </div>
       </nav>
       <Dialog
