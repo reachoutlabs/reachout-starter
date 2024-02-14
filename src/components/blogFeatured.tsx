@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Article } from "./types/schema";
+import { format, parseISO } from "date-fns";
 
 interface HomeProps {
   posts: Article[];
@@ -27,7 +28,7 @@ export default function BlogFeatured({ posts }: HomeProps) {
 
             <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               <time dateTime={post.publishedDate} className="mr-8">
-                {post.publishedDate}
+              {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
               </time>
               <div className="-ml-4 flex items-center gap-x-4">
                 <svg

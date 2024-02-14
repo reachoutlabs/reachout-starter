@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Article } from "./types/schema";
+import { format, parseISO } from "date-fns";
 
 interface HomeProps {
   posts: Article[];
@@ -28,7 +29,7 @@ export default function BlogList({ posts } : HomeProps) {
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
                   <time dateTime={post.publishedDate} className="text-gray-500">
-                    {post.publishedDate}
+                  {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
                   </time>
                   <svg
                     viewBox="0 0 2 2"
