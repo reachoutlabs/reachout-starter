@@ -1,5 +1,4 @@
 import client from "@/lib/reachout";
-import ArticlesHero from "@/components/articles/articlesHero";
 import BlogFeatured from "@/components/blogFeatured";
 import BlogList from "@/components/blogList";
 
@@ -33,7 +32,6 @@ export default async function Articles() {
   return (
     <div className="bg-white py-36 max-w-7xl mx-auto">
       <main className="isolate">
-        <ArticlesHero />
         <BlogFeatured posts={featuredPosts ?? []} />
         <BlogList posts={posts ?? []} />
       </main>
