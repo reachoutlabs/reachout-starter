@@ -1,8 +1,12 @@
+import Link from "next/link";
+
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
+import { Button } from "./ui/button";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const features = [
   {
@@ -43,6 +47,34 @@ export default function GettingStarted() {
                 in dev mode. Sample data is pre-loaded from the ReachOut demo
                 organization data.
               </p>
+              <div className="mt-4">
+              <Button asChild className="bg-purple-600 h-12 mr-4">
+                  <Link
+                    href="https://reachout-demo.reachoutapp.io"
+                    className="font-bold text-lg"
+                    target="_blank"
+                  >
+                    Demo CMS
+                  </Link>
+                </Button>
+              <p className="mt-4">
+                User: guests@reachoutapp.io<br />
+                Password: ReachOutStarter
+              </p>
+              </div>
+              <Button asChild className="bg-gray-800 h-12 mt-4">
+              <Link
+                    href="https://github.com/reachoutlabs/reachout-starter"
+                    className="font-bold text-lg"
+                    target="_blank"
+                  >
+                    <GitHubLogoIcon className="mr-4" />
+                GitHub
+                </Link>
+              </Button>
+              <p className="mt-4">
+                Fork and run locally
+              </p>
               <div className="rounded-md mt-8 bg-gray-800 text-gray-200 px-4 py-8">
                 <pre>
                   <span className="text-gray-500">reachout-starter %</span> pnpm
@@ -51,6 +83,7 @@ export default function GettingStarted() {
                   dev
                 </pre>
               </div>
+              
             </div>
           </div>
           <div className="sm:px-6 lg:px-0">

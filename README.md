@@ -10,7 +10,7 @@ The ReachOut Next.js boilerplate is the free starting point to build any content
 This template is provided as it is and it's free to use.
 It is pre-configured and comes with an integration to ReachOut to quickly get started.
 
-Visit the [demo website](https://starter.reachoutapp.io).
+Visit the [demo website](https://starter.reachoutapp.io) and check out the [Demo CMS](https://reachout-demo.reachoutapp.io/) behind it.
 
 ### Features
 - Next.js 14.1
