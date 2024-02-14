@@ -17,6 +17,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.55)(react@18.2.0)
+  '@reachoutapp/sdk':
+    specifier: ^0.9.10
+    version: 0.9.10
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -355,6 +358,10 @@ packages:
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.55)(react@18.2.0)
       '@types/react': 18.2.55
       react: 18.2.0
+    dev: false
+
+  /@reachoutapp/sdk@0.9.10:
+    resolution: {integrity: sha512-kOX0VSklrNlyWcxYwJ7G6H5+U06ayHD4b/ST0UWOmRYkiKeelNxtculjriUFrFGnh3YQCw7SLEaifpVU6RsPrw==}
     dev: false
 
   /@rushstack/eslint-patch@1.7.2:

@@ -3,7 +3,7 @@
 const nextConfig = {
     images: {
       dangerouslyAllowSVG: true,
-      remotePatterns: [{ hostname: "images.unsplash.com" }]
+      remotePatterns: [{ hostname: "reachout-demo.reachoutapp.io" }]
     }
   };
 export default nextConfig;
