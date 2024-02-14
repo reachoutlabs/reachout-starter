@@ -7,7 +7,6 @@ interface HomeProps {
 }
 
 export default function BlogFeatured({ posts }: HomeProps) {
-
   return (
     <div className="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
       <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -28,7 +27,7 @@ export default function BlogFeatured({ posts }: HomeProps) {
 
             <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               <time dateTime={post.publishedDate} className="mr-8">
-              {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
+                {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
               </time>
               <div className="-ml-4 flex items-center gap-x-4">
                 <svg

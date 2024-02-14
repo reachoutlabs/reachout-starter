@@ -6,7 +6,7 @@ interface HomeProps {
   posts: Article[];
 }
 
-export default function BlogList({ posts } : HomeProps) {
+export default function BlogList({ posts }: HomeProps) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -29,7 +29,7 @@ export default function BlogList({ posts } : HomeProps) {
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
                   <time dateTime={post.publishedDate} className="text-gray-500">
-                  {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
+                    {format(parseISO(post.publishedDate), "MMMM dd, yyyy")}
                   </time>
                   <svg
                     viewBox="0 0 2 2"

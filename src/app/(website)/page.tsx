@@ -13,16 +13,15 @@ import CaseStudiesHomeList from "@/components/caseStudies";
 import client from "@/lib/reachout";
 
 export default async function Home() {
-
   const posts = await client.readItems("Sample_content", {
     fields: ["*"],
     sort: ["-publishedDate"],
     filter: {
-      "status" : {
-        "_eq": "published",
+      status: {
+        _eq: "published",
       },
-      "tag" : {
-        "_neq": "Featured",
+      tag: {
+        _neq: "Featured",
       },
     },
   });
@@ -31,11 +30,11 @@ export default async function Home() {
     fields: ["*"],
     sort: ["-publishedDate"],
     filter: {
-      "status" : {
-        "_eq": "published",
+      status: {
+        _eq: "published",
       },
-      "tag" : {
-        "_eq": "Featured",
+      tag: {
+        _eq: "Featured",
       },
     },
   });

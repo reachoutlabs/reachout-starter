@@ -4,16 +4,15 @@ import BlogFeatured from "@/components/blogFeatured";
 import BlogList from "@/components/blogList";
 
 export default async function Articles() {
-
   const posts = await client.readItems("Sample_content", {
     fields: ["*"],
     sort: ["-publishedDate"],
     filter: {
-      "status" : {
-        "_eq": "published",
+      status: {
+        _eq: "published",
       },
-      "tag" : {
-        "_neq": "Featured",
+      tag: {
+        _neq: "Featured",
       },
     },
   });
@@ -22,11 +21,11 @@ export default async function Articles() {
     fields: ["*"],
     sort: ["-publishedDate"],
     filter: {
-      "status" : {
-        "_eq": "published",
+      status: {
+        _eq: "published",
       },
-      "tag" : {
-        "_eq": "Featured",
+      tag: {
+        _eq: "Featured",
       },
     },
   });
