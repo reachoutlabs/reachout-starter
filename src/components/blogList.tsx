@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Article } from "./types/schema";
 import { format, parseISO } from "date-fns";
 
@@ -17,14 +18,15 @@ export default function BlogList({ posts }: HomeProps) {
               className="flex flex-col items-start justify-top"
             >
               <div className="relative w-full">
-                <Image
-                  src={`https://reachout-demo.reachoutapp.io/assets/${post.articleFeaturedImage}`}
-                  width={800}
-                  height={600}
-                  alt={post.headline}
-                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                <Link href={`/articles/${post.slug}`}>
+                  <Image
+                    src={`https://reachout-demo.reachoutapp.io/assets/${post.articleFeaturedImage}`}
+                    width={800}
+                    height={600}
+                    alt={post.headline}
+                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                  />
+                </Link>
               </div>
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
@@ -44,19 +46,19 @@ export default function BlogList({ posts }: HomeProps) {
                   >
                     <circle cx={1} cy={1} r={1} />
                   </svg>
-                  <a
-                    href={post.kicker}
+                  <Link
+                    href={`/articles/${post.slug}`}
                     className="relative z-10 rounded-full px-3 py-1.5 font-medium text-gray-600"
                   >
                     {post.kicker}
-                  </a>
+                  </Link>
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={post.slug}>
+                    <Link href={`/articles/${post.slug}`}>
                       <span className="absolute inset-0" />
                       {post.headline}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                     {post.excerpt}

@@ -56,10 +56,10 @@ export default function BlogFeatured({ posts }: HomeProps) {
               </div>
             </div>
             <h3 className="mt-3 text-2xl font-semibold leading-snug text-white">
-              <a href={post.slug}>
+              <Link href={`/articles/${post.slug}`}>
                 <span className="absolute inset-0" />
                 {post.headline}
-              </a>
+              </Link>
             </h3>
           </article>
         ))}
