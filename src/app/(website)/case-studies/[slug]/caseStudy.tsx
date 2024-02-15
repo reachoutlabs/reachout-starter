@@ -10,13 +10,13 @@ interface CaseStudyProps {
 
 export default function CaseStudy({ caseStudies }: CaseStudyProps) {
   return (
-    <div className="bg-white pt-24">
+    <div className="bg-white lg:pt-8 px-8 lg:px-0">
       {caseStudies.slice(0, 1).map((caseStudy) => (
         <article
         key={caseStudy.id}
         className=""
       >
-      <div className="mb-16 grid grid-cols-2 items-center">
+      <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 items-center">
         <Image
           src={`https://reachout-demo.reachoutapp.io/assets/${caseStudy.caseFeaturedImage}`}
           alt={caseStudy.headline || ""}
@@ -24,7 +24,7 @@ export default function CaseStudy({ caseStudies }: CaseStudyProps) {
           height={600}
           className="w-auto h-[600px] mx-auto shadow-lg rounded-md"
         ></Image>
-        <div className="mx-auto max-w-4xl text-base leading-snug text-gray-700">
+        <div className="mt-8 mx-auto max-w-4xl text-base leading-snug text-gray-700">
         <h2 className="text-xl font-semibold leading-7 text-slate-600">
           <span className="text-slate-500 font-regular">Customer: </span>{caseStudy.customer}
         </h2>

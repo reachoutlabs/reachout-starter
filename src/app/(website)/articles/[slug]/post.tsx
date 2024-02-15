@@ -9,7 +9,7 @@ interface PostProps {
 
 export default function Post({ posts }: PostProps) {
   return (
-    <div className="bg-white pt-24">
+    <div className="bg-white lg:pt-24 px-8 lg:px-0">
       {posts.slice(0, 1).map((post) => (
         <article
         key={post.id}
