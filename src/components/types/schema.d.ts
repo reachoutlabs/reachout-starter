@@ -24,6 +24,7 @@ export type Article = {
     excerpt: string;
     caseContent: string;
     caseFeaturedImage: string;
+    project_url: string;
   };
   
   export type Schema = {

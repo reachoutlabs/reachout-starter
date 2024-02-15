@@ -2,6 +2,7 @@ import { CaseStudy } from "@/components/types/schema";
 import Html from "@/components/ui/html";
 import { format, millisecondsToMinutes, parseISO } from "date-fns";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CaseStudyProps {
   caseStudies: CaseStudy[];
@@ -27,13 +28,14 @@ export default function CaseStudy({ caseStudies }: CaseStudyProps) {
         <h2 className="text-xl font-semibold leading-7 text-slate-600">
           <span className="text-slate-500 font-regular">Customer: </span>{caseStudy.customer}
         </h2>
-        <h1 className="mt-4 text-5xl font-bold leading-snug tracking-tight text-gray-900">
+        <h1 className="mt-4 text-5xl font-bold leading-snug tracking-tight text-slate-800">
           {caseStudy.headline}
         </h1>
-        <p className="mt-8 text-xl font-medium leading-snug">
+        <p className="mt-8 text-xl font-medium leading-snug text-slate-600">
           {caseStudy.excerpt}
           </p>
           <p className="mt-4 text-md font-medium leading-snug">Written by: {caseStudy.author}</p>
+          <p className="mt-4 text-md font-medium leading-snug">Project URL: <Link href={caseStudy.project_url} target="_blank"><span className="text-purple-700">{caseStudy.project_url}</span></Link></p>
       </div>
       </div>
       <div className="mt-10 max-w-3xl mx-auto text-lg prose font-regular leading-7 dark:prose-invert [&>p]:text-regular [&>p]:mt-4">
