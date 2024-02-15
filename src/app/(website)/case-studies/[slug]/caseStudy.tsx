@@ -24,14 +24,14 @@ export default function CaseStudy({ caseStudies }: CaseStudyProps) {
           className="w-auto h-[600px] mx-auto shadow-lg rounded-md"
         ></Image>
         <div className="mx-auto max-w-4xl text-base leading-snug text-gray-700">
-        <h2 className="text-xl font-semibold leading-7 text-slate-600 uppercase">
-          {caseStudy.customer}
+        <h2 className="text-xl font-semibold leading-7 text-slate-600">
+          <span className="text-slate-500 font-regular">Customer: </span>{caseStudy.customer}
         </h2>
         <h1 className="mt-4 text-5xl font-bold leading-snug tracking-tight text-gray-900">
           {caseStudy.headline}
         </h1>
         <p className="mt-8 text-xl font-medium leading-snug">
-          <span className="text-gray-600 font-semibold">{caseStudy.customer} &bull;</span> {caseStudy.excerpt}
+          {caseStudy.excerpt}
           </p>
           <p className="mt-4 text-md font-medium leading-snug">Written by: {caseStudy.author}</p>
       </div>

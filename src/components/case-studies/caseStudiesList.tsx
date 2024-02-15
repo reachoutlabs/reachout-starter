@@ -31,12 +31,11 @@ export default function CaseStudiesList({ caseStudies }: HomeProps) {
                 </div>
                 <div>
                   <div className="flex items-center gap-x-4 text-md font-semibold">
-                    <span className="text-gray-500 font-medium">Customer:</span>{" "}
-                    {caseStudy.customer}
+                    <span className="text-slate-500 font-regular">Customer:</span> {caseStudy.customer}
                   </div>
                   <div className="group relative max-w-xl">
                     <Link href={`/case-studies/${caseStudy.slug}`}>
-                      <h3 className="mt-3 text-2xl font-semibold leading-snug text-gray-900 group-hover:text-gray-600">
+                      <h3 className="mt-3 text-3xl font-bold leading-snug text-gray-900 group-hover:text-gray-600">
                         <a href={caseStudy.slug}>
                           <span className="absolute inset-0" />
                           {caseStudy.headline}
