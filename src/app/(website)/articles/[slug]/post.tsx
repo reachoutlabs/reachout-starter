@@ -36,7 +36,7 @@ export default function Post({ posts }: PostProps) {
           className="w-full max-h-128"
         ></Image>
       </div>
-      <div className="mt-10 max-w-3xl mx-auto text-lg prose font-regular leading-7 dark:prose-invert [&>p]:text-regular [&>p]:mt-4">
+      <div className="mt-10 max-w-3xl mx-auto text-lg prose font-regular leading-7 dark:prose-invert [&>p]:text-regular [&>blockquote]:my-8 [&>blockquote]:pl-4 [&>blockquote]:font-bold [&>blockquote]:italic [&>blockquote]:text-gray-600 [&>h2]:mt-8 [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:text-gray-700 [&>h3]:mt-8 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-gray-700 [&>ol>li]:my-2 [&>ol]:my-4 [&>ol]:pl-4 [&>p>a]:font-bold [&>p>a]:text-purple-700 [&>p>a]:underline [&>p>img]:mx-auto [&>p>img]:my-8 [&>p>img]:w-[1200px] [&>p>img]:xl:ml-[-20%] [&>p>img]:xl:max-w-[140%] [&>p]:mt-4">
         <Html content={post.articleBody} />
       </div>
       </article>
