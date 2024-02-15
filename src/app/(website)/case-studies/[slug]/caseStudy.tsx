@@ -34,8 +34,7 @@ export default function CaseStudy({ caseStudies }: CaseStudyProps) {
         <p className="mt-8 text-xl font-medium leading-snug text-slate-600">
           {caseStudy.excerpt}
           </p>
-          <p className="mt-4 text-md font-medium leading-snug">Written by: {caseStudy.author}</p>
-          <p className="mt-4 text-md font-medium leading-snug">Project URL: <Link href={caseStudy.project_url} target="_blank"><span className="text-purple-700">{caseStudy.project_url}</span></Link></p>
+          <p className="mt-6 text-md font-medium leading-snug">Project URL: <Link href={caseStudy.project_url} target="_blank"><span className="text-purple-700">{caseStudy.project_url}</span></Link></p>
       </div>
       </div>
       <div className="mt-10 max-w-3xl mx-auto text-lg prose font-regular leading-7 dark:prose-invert [&>p]:text-regular [&>p]:mt-4">
