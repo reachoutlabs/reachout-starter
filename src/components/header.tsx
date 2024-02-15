@@ -11,7 +11,10 @@ export default function Header() {
   const navigation = [
     { name: "Articles", href: "/articles" },
     { name: "Case studies", href: "/case-studies" },
-    { name: "Github", href: "https://github.com/reachoutlabs/reachout-starter" },
+    {
+      name: "Github",
+      href: "https://github.com/reachoutlabs/reachout-starter",
+    },
     { name: "ReachOut pricing", href: "/#pricing" },
     { name: "ReachOut", href: "https://reachoutapp.io" },
   ];
@@ -27,7 +30,7 @@ export default function Header() {
             <Image
               className="h-16 w-auto"
               src="/Reach-Out-logo__display-monochrome.svg"
-              alt="ReachOut starter"
+              alt="ReachOut Starter"
               width={160}
               height={160}
             />
@@ -55,13 +58,15 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
-        <a href="#" className="text-sm font-bold leading-6 text-gray-900">
-        Sign up
+          <a href="#" className="text-sm font-bold leading-6 text-gray-900">
+            Sign up
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-500">
             Log in
           </a>
-          <span className="text-sm px-2 py-1 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">PRO</span>
+          <span className="text-sm px-2 py-1 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">
+            PRO
+          </span>
         </div>
       </nav>
       <Dialog
@@ -75,10 +80,12 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                src="/Reach-Out-logo__display-monochrome.svg"
+                alt="ReachOut Starter"
+                width={160}
+                height={160}
               />
             </a>
             <button

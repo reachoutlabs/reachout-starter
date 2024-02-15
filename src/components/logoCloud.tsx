@@ -1,7 +1,3 @@
-"use client";
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default function LogoCloud() {
@@ -49,21 +45,21 @@ export default function LogoCloud() {
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-10 w-full object-contain lg:col-span-1 invert"
                 src="/repeople.svg"
                 alt="Tuple"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-10 w-full object-contain sm:col-start-2 lg:col-span-1 invert"
                 src="/logo-lexify.png"
                 alt="SavvyCal"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 col-start-2 max-h-10 w-full object-contain sm:col-start-auto lg:col-span-1 invert"
                 src="/the-portager.png"
                 alt="Statamic"
