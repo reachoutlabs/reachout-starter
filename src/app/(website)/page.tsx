@@ -39,6 +39,16 @@ export default async function Home() {
     },
   });
 
+  const caseStudies = await client.readItems("Sample_case_studies", {
+    fields: ["*"],
+    sort: ["-publishedDate"],
+    filter: {
+      status: {
+        _eq: "published",
+      },
+    },
+  });
+
   return (
     <div className="bg-white">
       <main className="isolate">
@@ -47,7 +57,7 @@ export default async function Home() {
         <BlogFeatured posts={featuredPosts ?? []} />
         <BlogList posts={posts ?? []} />
         <Values />
-        <CaseStudiesHomeList />
+        <CaseStudiesHomeList caseStudies={caseStudies ?? []} />
         <NewsletterSignup />
         <PrimaryFeatures />
         <SecondaryFeatures />

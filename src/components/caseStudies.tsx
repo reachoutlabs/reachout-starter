@@ -1,4 +1,10 @@
 import Link from "next/link"
+import { CaseStudy } from "./types/schema";
+import { format, parseISO } from "date-fns";
+
+interface HomeProps {
+  caseStudies: CaseStudy[];
+}
 
   const posts = [
     {
@@ -25,7 +31,7 @@ import Link from "next/link"
         },
   ]
   
-  export default function CaseStudiesHomeList() {
+  export default function CaseStudiesHomeList({ caseStudies }) {
     return (
       <div className="bg-white max-w-7xl mx-auto pb-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
@@ -33,26 +39,19 @@ import Link from "next/link"
           <Link href="/case-studies" className="text-purple-800">Case studies</Link></h2>
           <div className="mx-auto w-full max-w-2xl border-t border-gray-900/10 pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0">
             <div className="-my-12 divide-y divide-gray-900/10">
-              {posts.map((post) => (
-                <article key={post.id} className="py-12">
+              {caseStudies.slice(0, 2).map((caseStudy) => (
+                <article key={caseStudy.id} className="py-12">
                   <div className="group relative max-w-xl">
-                  <div className="flex items-center gap-x-4 text-xs">
-                        {post.publishedDate}
-                        <svg
-                    viewBox="0 0 2 2"
-                    className="-ml-0.5 h-0.5 w-0.5 flex-none fill-gray-500"
-                  >
-                    <circle cx={1} cy={1} r={1} />
-                  </svg>
-                        {post.customer}
+                  <div className="flex items-center gap-x-4 text-md font-semibold">
+                        <span className="text-gray-500 font-medium">Customer:</span> {caseStudy.customer}
                     </div>
-                    <h2 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-gray-600">
-                      <a href={post.href}>
+                    <h2 className="mt-2 text-2xl leading-snug font-semibold text-purple-900 group-hover:text-purple-600">
+                      <Link href={`/case-studies/${caseStudy.slug}`}>
                         <span className="absolute inset-0" />
-                        {post.headline}
-                      </a>
+                        {caseStudy.headline}
+                      </Link>
                     </h2>
-                    <p className="mt-4 text-sm leading-6 text-gray-600">{post.description}</p>
+                    <p className="mt-4 text-sm leading-6 text-gray-600">{caseStudy.excerpt}</p>
                   </div>
                 </article>
               ))}
