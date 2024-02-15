@@ -9,7 +9,7 @@ export default function Footer() {
     main: [
       { name: "Articles", href: "/articles" },
       { name: "Case studies", href: "/case-studies" },
-      { name: "About", href: "#" },
+      { name: "About", href: "/about" },
       { name: "PRO", href: "https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897" },
       { name: "ReachOut", href: "https://reachoutapp.io" },
     ],
