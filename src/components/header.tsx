@@ -26,7 +26,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Reach Out Starter Kit</span>
             <Image
               className="h-16 w-auto"
               src="/Reach-Out-logo__display-monochrome.svg"

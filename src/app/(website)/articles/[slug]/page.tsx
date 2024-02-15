@@ -4,12 +4,12 @@ import { Article } from "@/components/types/schema";
 
 export async function generateStaticParams() {
   const posts = await client.readItems("Sample_content", {
-    fields: ["slug"]
+    fields: ["slug"],
   });
 
   return (
-    posts?.map(post => ({
-      slug: post.slug
+    posts?.map((post) => ({
+      slug: post.slug,
     })) || []
   );
 }
@@ -31,7 +31,7 @@ export default async function Article({ params }: PostPageProps) {
   return (
     <div className="bg-white py-36 max-w-7xl mx-auto">
       <main className="isolate">
-        <Post posts={posts ?? []} />
+        <Post post={posts ? posts[0] : null} />
       </main>
     </div>
   );

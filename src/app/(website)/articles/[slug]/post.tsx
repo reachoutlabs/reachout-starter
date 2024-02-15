@@ -4,13 +4,15 @@ import { format, millisecondsToMinutes, parseISO } from "date-fns";
 import Image from "next/image";
 
 interface PostProps {
-  posts: Article[];
+  post: Article | null;
 }
 
-export default function Post({ posts }: PostProps) {
+export default function Post({ post }: PostProps) {
+  
+  if (!post) return null;
+  
   return (
     <div className="bg-white lg:pt-24 px-8 lg:px-0">
-      {posts.slice(0, 1).map((post) => (
         <article
         key={post.id}
         className=""
@@ -40,7 +42,6 @@ export default function Post({ posts }: PostProps) {
         <Html content={post.articleBody} />
       </div>
       </article>
-      ))}
     </div>
   );
 }
