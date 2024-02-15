@@ -36,7 +36,7 @@ export default function Post({ posts }: PostProps) {
           className="w-full max-h-128"
         ></Image>
       </div>
-      <div className="mt-10 max-w-3xl mx-auto text-lg prose font-medium leading-7 dark:prose-invert [&>p]:text-regular [&>p]:mt-4">
+      <div className="mt-10 max-w-3xl mx-auto text-lg prose font-regular leading-7 dark:prose-invert [&>p]:text-regular [&>p]:mt-4">
         <Html content={post.articleBody} />
       </div>
       </article>

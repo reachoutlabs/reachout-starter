@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function CaseStudiesHero() {
 
   return (
-    <div className="mt-24 max-w-4xl mx-auto">
+    <div className="mt-24 max-w-4xl mx-auto text-slate-700">
         <h1 className="text-5xl font-bold">
             Case studies
         </h1>

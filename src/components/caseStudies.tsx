@@ -33,7 +33,7 @@ export default function CaseStudiesHomeList({ caseStudies }: HomeProps) {
     <div className="bg-white max-w-7xl mx-auto pb-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
         <h2 className="text-4xl font-bold">
-          <Link href="/case-studies" className="text-purple-800">
+          <Link href="/case-studies" className="text-slate-700">
             Case studies
           </Link>
         </h2>
@@ -46,7 +46,7 @@ export default function CaseStudiesHomeList({ caseStudies }: HomeProps) {
                     <span className="text-gray-500 font-medium">Customer:</span>{" "}
                     {caseStudy.customer}
                   </div>
-                  <h2 className="mt-2 text-2xl leading-snug font-semibold text-purple-900 group-hover:text-purple-600">
+                  <h2 className="mt-2 text-2xl leading-snug font-semibold text-slate-700 group-hover:text-slate-500">
                     <Link href={`/case-studies/${caseStudy.slug}`}>
                       <span className="absolute inset-0" />
                       {caseStudy.headline}
