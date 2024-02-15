@@ -22,8 +22,8 @@ export default function Post({ posts }: PostProps) {
         <h1 className="mt-4 text-5xl font-bold leading-snug tracking-tight text-gray-900">
           {post.headline}
         </h1>
-        <p className="mt-8 text-xl font-medium leading-snug">
-          <span className="text-gray-600 font-semibold">{post.category} &bull;</span> {post.excerpt}
+        <p className="mt-8 text-xl font-regular leading-snug">
+          <span className="text-gray-600 font-semibold">{post.category}</span> &bull; {post.excerpt}
           </p>
           <p className="mt-4 text-md font-medium leading-snug">Written by: {post.author}</p>
       </div>

@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ReachOut starter kit",
+  title: "ReachOut Starter Kit",
   description: "Next.js starter kit for content and marketing websites",
 };
 
