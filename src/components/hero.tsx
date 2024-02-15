@@ -55,19 +55,19 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="mb-4 font-semibold uppercase text-xl text-purple-600"><span className="text-sm rounded-full bg-purple-600 px-3 py-2 font-medium text-white hover:bg-purple-300 uppercase mx-2">beta</span> ReachOut starter kit</p>
-              <h1 className="text-4xl leading-14 font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <p className="font-semibold uppercase text-lg text-purple-600"><span className="text-sm rounded-full bg-purple-600 px-3 py-2 font-regular text-white hover:bg-purple-300 uppercase mx-2">beta</span> ReachOut starter kit</p>
+              <h1 className="mt-8 text-4xl leading-14 font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Create dynamic web applications <span className="text-purple-500 underline">faster</span>
               </h1>
               <p className="relative mt-16 text-2xl leading-snug font-bold text-gray-600 sm:max-w-md lg:max-w-none">
                 The{" "}
                 <span className="text-purple-500">Next.js starter kit</span> for content and marketing sites
               </p>
-              <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
+              <h2 className="relative mt-16 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
                 Features
               </h2>
-              <p className="relative mt-8 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                <ul className="font-regular grid grid-cols-2 leading-9">
+              <p className="relative mt-4 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid lg:grid-cols-2 leading-9">
                   <li>&bull; Next.js 14</li>
                   <li>&bull; ISR for content pages</li>
                   <li>&bull; Data fetching and data schema validation</li>
@@ -77,11 +77,11 @@ export default function Hero() {
                   <li>&bull; Content paywall<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
                 </ul>
               </p>
-              <h2 className="relative mt-8 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
+              <h2 className="relative mt-4 text-lg font-medium text-gray-600 sm:max-w-md lg:max-w-none">
                 ReachOut integration
               </h2>
-              <p className="relative mt-8 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                <ul className="font-regular grid grid-cols-2 leading-9">
+              <p className="relative mt-4 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid lg:grid-cols-2 leading-9">
                   <li>&bull; Web and email analytics</li>
                   <li>&bull; Headless CMS</li>
                   <li>&bull; Forms</li>
