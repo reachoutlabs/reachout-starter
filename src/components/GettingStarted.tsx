@@ -1,37 +1,10 @@
-import Link from "next/link";
-
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-import { Button } from "./ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-
-const features = [
-  {
-    name: "Push to deploy.",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: "SSL certificates.",
-    description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
-  },
-  {
-    name: "Database backups.",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ServerIcon,
-  },
-];
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import { Button } from './ui/Button';
 
 export default function GettingStarted() {
   return (
-    <div className="overflow-hidden bg-white pt-8 pb-32">
+    <div className="overflow-hidden bg-white pb-32 pt-8">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 md:px-0 lg:pr-4 lg:pt-4">
@@ -48,34 +21,33 @@ export default function GettingStarted() {
                 organization data.
               </p>
               <div className="mt-4">
-              <Button asChild className="bg-purple-600 h-12 mr-4">
+                <Button asChild className="mr-4 h-12 bg-purple-600">
                   <Link
                     href="https://reachout-demo.reachoutapp.io"
-                    className="font-bold text-lg"
+                    className="text-lg font-bold"
                     target="_blank"
                   >
                     Demo CMS
                   </Link>
                 </Button>
-              <p className="mt-4">
-                User: guests@reachoutapp.io<br />
-                Password: ReachOutStarter
-              </p>
+                <p className="mt-4">
+                  User: guests@reachoutapp.io
+                  <br />
+                  Password: ReachOutStarter
+                </p>
               </div>
-              <Button asChild className="bg-gray-800 h-12 mt-4">
-              <Link
-                    href="https://github.com/reachoutlabs/reachout-starter"
-                    className="font-bold text-lg"
-                    target="_blank"
-                  >
-                    <GitHubLogoIcon className="mr-4" />
-                GitHub
+              <Button asChild className="mt-4 h-12 bg-gray-800">
+                <Link
+                  href="https://github.com/reachoutlabs/reachout-starter"
+                  className="text-lg font-bold"
+                  target="_blank"
+                >
+                  <GitHubLogoIcon className="mr-4" />
+                  GitHub
                 </Link>
               </Button>
-              <p className="mt-4">
-                Fork and run locally
-              </p>
-              <div className="rounded-md mt-8 bg-gray-800 text-gray-200 px-4 py-8">
+              <p className="mt-4">Fork and run locally</p>
+              <div className="mt-8 rounded-md bg-gray-800 px-4 py-8 text-gray-200">
                 <pre>
                   <span className="text-gray-500">reachout-starter %</span> pnpm
                   i<br />
@@ -83,7 +55,6 @@ export default function GettingStarted() {
                   dev
                 </pre>
               </div>
-              
             </div>
           </div>
           <div className="sm:px-6 lg:px-0">
@@ -104,7 +75,7 @@ export default function GettingStarted() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-6 pb-14 pt-6 text-gray-200 text-sm">
+                  <div className="px-6 pb-14 pt-6 text-sm text-gray-200">
                     NEXT_PUBLIC_REACHOUT_URL=https://reachout-demo.reachoutapp.io/
                     <br />
                     NEXT_PUBLIC_REACHOUT_WORKER_URL=https://track.reachoutapp.io/

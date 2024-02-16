@@ -1,33 +1,33 @@
-import { CheckIcon } from "@heroicons/react/20/solid";
+import { CheckIcon } from '@heroicons/react/20/solid';
 
 const tiers = [
   {
-    name: "Web",
-    id: "web",
-    href: "#",
-    priceMonthly: "from $9",
+    name: 'Web',
+    id: 'web',
+    href: '#',
+    priceMonthly: 'from $9',
     description:
-      "Track website visits, identify users, trigger events, fetch data and personalize pages.",
+      'Track website visits, identify users, trigger events, fetch data and personalize pages.',
     features: [
-      "Unlimited data hosting",
-      "Unlimited CMS tables",
-      "Recipient-level analytics",
-      "First-party library",
-      "Lightweight React and JS versions",
+      'Unlimited data hosting',
+      'Unlimited CMS tables',
+      'Recipient-level analytics',
+      'First-party library',
+      'Lightweight React and JS versions',
     ],
   },
   {
-    name: "Email",
-    id: "email",
-    href: "#",
-    priceMonthly: "from $59",
+    name: 'Email',
+    id: 'email',
+    href: '#',
+    priceMonthly: 'from $59',
     description:
-      "Automate triggered emails, create newsletter campaigns, send mass emails to user segments.",
+      'Automate triggered emails, create newsletter campaigns, send mass emails to user segments.',
     features: [
-      "DKIM, SPF and DMARC",
-      "High deliverability",
-      "Email analytics",
-      "Secure and privacy-first user tracking",
+      'DKIM, SPF and DMARC',
+      'High deliverability',
+      'Email analytics',
+      'Secure and privacy-first user tracking',
     ],
   },
 ];
@@ -38,7 +38,7 @@ export default function Pricing() {
       <div className="isolate overflow-hidden bg-gray-900">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-lg font-bold leading-7 uppercase text-purple-600">
+            <h2 className="text-lg font-bold uppercase leading-7 text-purple-600">
               ReachOut Pricing
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -47,7 +47,8 @@ export default function Pricing() {
           </div>
           <div className="relative mt-6">
             <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
-              ReachOut starter kit is free to use forever.<br />
+              ReachOut starter kit is free to use forever.
+              <br />
               PRO is a $149 lifetime purchase.
             </p>
             <svg
@@ -128,15 +129,17 @@ export default function Pricing() {
                       Enterprise
                     </h3>
                     <p className="mt-1 text-base leading-7 text-gray-600">
-                      Deploy the ReachOut CMS and database on-premises or dedicated servers. Retain administrative access to your content and user data. Connect BI tools such as Metabase. Starting at $1,000 / month.
+                      Deploy the ReachOut CMS and database on-premises or
+                      dedicated servers. Retain administrative access to your
+                      content and user data. Connect BI tools such as Metabase.
+                      Starting at $1,000 / month.
                     </p>
                   </div>
                   <a
                     href="mailto:enterprise@reachoutapp.io"
                     className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-purple-600 ring-1 ring-inset ring-purple-200 hover:ring-purple-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
                   >
-                    Enquire{" "}
-                    <span aria-hidden="true">&rarr;</span>
+                    Enquire <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>

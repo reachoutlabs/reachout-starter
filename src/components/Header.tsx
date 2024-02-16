@@ -1,23 +1,26 @@
-"use client";
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+
+const navigation = [
+  { name: 'Articles', href: '/articles' },
+  { name: 'Case studies', href: '/case-studies' },
+  {
+    name: 'Github',
+    href: 'https://github.com/reachoutlabs/reachout-starter',
+    external: true,
+  },
+  { name: 'ReachOut pricing', href: '/#pricing' },
+  { name: 'ReachOut', href: 'https://reachoutapp.io', external: true },
+];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigation = [
-    { name: "Articles", href: "/articles" },
-    { name: "Case studies", href: "/case-studies" },
-    {
-      name: "Github",
-      href: "https://github.com/reachoutlabs/reachout-starter",
-    },
-    { name: "ReachOut pricing", href: "/#pricing" },
-    { name: "ReachOut", href: "https://reachoutapp.io" },
-  ];
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
@@ -47,24 +50,35 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              {item.name}
-            </a>
-          ))}
+          {navigation.map((item) =>
+            item.external ? (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                {item.name}
+              </Link>
+            ),
+          )}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
+        <div className="hidden gap-4 lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-bold leading-6 text-gray-900">
             Sign up
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-500">
             Log in
           </a>
-          <span className="text-sm px-2 py-1 rounded-full bg-gray-200 font-medium text-gray-600 hover:bg-purple-300">
+          <span className="rounded-full bg-gray-200 px-2 py-1 text-sm font-medium text-gray-600 hover:bg-purple-300">
             PRO
           </span>
         </div>
@@ -100,15 +114,26 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+                {navigation.map((item) =>
+                  item.external ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </Link>
+                  ),
+                )}
               </div>
             </div>
           </div>

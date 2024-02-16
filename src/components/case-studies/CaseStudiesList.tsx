@@ -1,13 +1,12 @@
-import Image from "next/image";
-import { CaseStudy } from "../types/schema";
-import { format, parseISO } from "date-fns";
-import Link from "next/link";
+import { CaseStudy } from '@/types/schema';
+import Image from 'next/image';
+import Link from 'next/link';
 
-interface HomeProps {
+interface CaseStudiesListProps {
   caseStudies: CaseStudy[];
 }
 
-export default function CaseStudiesList({ caseStudies }: HomeProps) {
+export default function CaseStudiesList({ caseStudies }: CaseStudiesListProps) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,8 +29,11 @@ export default function CaseStudiesList({ caseStudies }: HomeProps) {
                   </Link>
                 </div>
                 <div>
-                  <div className="flex items-center gap-x-4 text-md font-semibold">
-                    <span className="text-slate-500 font-regular">Customer:</span> {caseStudy.customer}
+                  <div className="text-md flex items-center gap-x-4 font-semibold">
+                    <span className="font-regular text-slate-500">
+                      Customer:
+                    </span>{' '}
+                    {caseStudy.customer}
                   </div>
                   <div className="group relative max-w-xl">
                     <Link href={`/case-studies/${caseStudy.slug}`}>
@@ -42,7 +44,7 @@ export default function CaseStudiesList({ caseStudies }: HomeProps) {
                         </a>
                       </h3>
                     </Link>
-                    <p className="mt-5 text-md leading-snug text-gray-600">
+                    <p className="text-md mt-5 leading-snug text-gray-600">
                       {caseStudy.excerpt}
                     </p>
                   </div>

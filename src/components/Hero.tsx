@@ -1,13 +1,9 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { Button } from '@/components/ui/Button';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="relative isolate py-16">
       <svg
@@ -47,7 +43,7 @@ export default function Hero() {
           className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-purple-800 to-purple-600 opacity-30"
           style={{
             clipPath:
-              "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
+              'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
           }}
         />
       </div>
@@ -55,53 +51,77 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <p className="font-semibold uppercase text-lg text-purple-600"><span className="text-sm rounded-full bg-purple-600 px-3 py-2 font-regular text-white hover:bg-purple-300 uppercase mx-2">beta</span> ReachOut starter kit</p>
-              <h1 className="mt-8 text-4xl leading-14 font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Create dynamic web applications <span className="text-purple-500 underline">faster</span>
+              <p className="text-lg font-semibold uppercase text-purple-600">
+                <span className="font-regular mx-2 rounded-full bg-purple-600 px-3 py-2 text-sm uppercase text-white hover:bg-purple-300">
+                  beta
+                </span>{' '}
+                ReachOut starter kit
+              </p>
+              <h1 className="leading-14 mt-8 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Create dynamic web applications{' '}
+                <span className="text-purple-500 underline">faster</span>
               </h1>
-              <p className="relative mt-16 text-2xl leading-snug font-bold text-gray-600 sm:max-w-md lg:max-w-none">
-                The{" "}
-                <span className="text-purple-500">Next.js starter kit</span> for content and marketing sites
+              <p className="relative mt-16 text-2xl font-bold leading-snug text-gray-600 sm:max-w-md lg:max-w-none">
+                The <span className="text-purple-500">Next.js starter kit</span>{' '}
+                for content and marketing sites
               </p>
               <h2 className="relative mt-16 text-xl font-semibold text-gray-600 sm:max-w-md lg:max-w-none">
                 Features
               </h2>
-              <p className="relative mt-4 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                <ul className="font-regular grid lg:grid-cols-2 leading-9">
+              <p className="text-md font-regular relative mt-4 leading-snug text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid leading-9 lg:grid-cols-2">
                   <li>&bull; Next.js 14</li>
                   <li>&bull; ISR for content pages</li>
                   <li>&bull; Data fetching and data schema validation</li>
                   <li>&bull; Newsletter signup</li>
-                  <li>&bull; Payments<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
-                  <li>&bull; User authentication<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
-                  <li>&bull; Content paywall<span className="text-sm rounded-full bg-gray-200 px-2 py-1 font-medium text-gray-600 hover:bg-purple-300 mx-2">PRO</span></li>
+                  <li>
+                    &bull; Payments
+                    <span className="mx-2 rounded-full bg-gray-200 px-2 py-1 text-sm font-medium text-gray-600 hover:bg-purple-300">
+                      PRO
+                    </span>
+                  </li>
+                  <li>
+                    &bull; User authentication
+                    <span className="mx-2 rounded-full bg-gray-200 px-2 py-1 text-sm font-medium text-gray-600 hover:bg-purple-300">
+                      PRO
+                    </span>
+                  </li>
+                  <li>
+                    &bull; Content paywall
+                    <span className="mx-2 rounded-full bg-gray-200 px-2 py-1 text-sm font-medium text-gray-600 hover:bg-purple-300">
+                      PRO
+                    </span>
+                  </li>
                 </ul>
               </p>
               <h2 className="relative mt-4 text-lg font-medium text-gray-600 sm:max-w-md lg:max-w-none">
                 ReachOut integration
               </h2>
-              <p className="relative mt-4 text-md leading-snug font-regular text-gray-600 sm:max-w-md lg:max-w-none">
-                <ul className="font-regular grid lg:grid-cols-2 leading-9">
+              <p className="text-md font-regular relative mt-4 leading-snug text-gray-600 sm:max-w-md lg:max-w-none">
+                <ul className="font-regular grid leading-9 lg:grid-cols-2">
                   <li>&bull; Web and email analytics</li>
                   <li>&bull; Headless CMS</li>
                   <li>&bull; Forms</li>
                   <li>&bull; User management</li>
                 </ul>
               </p>
-              <div className="flex grid-cols-2 gap-4 mt-8">
-                <Button asChild className="bg-purple-600 h-12">
+              <div className="mt-8 flex grid-cols-2 gap-4">
+                <Button asChild className="h-12 bg-purple-600">
                   <Link
                     href="https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897"
-                    className="font-bold text-lg"
+                    className="text-lg font-bold"
                     target="_blank"
                   >
                     PRO waiting list
                   </Link>
                 </Button>
-                <Button asChild className="bg-gray-800 h-12">
-                  <Link href="https://github.com/reachoutlabs/reachout-starter" target="_blank">
-                  <GitHubLogoIcon className="mr-4" />
-                  Github
+                <Button asChild className="h-12 bg-gray-800">
+                  <Link
+                    href="https://github.com/reachoutlabs/reachout-starter"
+                    target="_blank"
+                  >
+                    <GitHubLogoIcon className="mr-4" />
+                    Github
                   </Link>
                 </Button>
               </div>
