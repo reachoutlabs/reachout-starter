@@ -1,39 +1,46 @@
-import client from "@/lib/reachout";
-import BlogFeatured from "@/components/blogFeatured";
-import BlogList from "@/components/blogList";
+import BlogFeatured from '@/components/BlogFeatured';
+import BlogList from '@/components/BlogList';
+import client from '@/lib/reachout';
+import { Metadata } from 'next';
 
-export default async function Articles() {
-  const posts = await client.readItems("Sample_content", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+export const metadata: Metadata = {
+  title: 'ReachOut Starter Kit',
+  description: 'Next.js starter kit for content and marketing websites',
+};
+
+export default async function ArticlesPage() {
+  const articles = await client.readItems('Sample_content', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
       tag: {
-        _neq: "Featured",
+        _neq: 'Featured',
       },
     },
   });
 
-  const featuredPosts = await client.readItems("Sample_content", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+  const featuredArticles = await client.readItems('Sample_content', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
+    limit: 2,
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
       tag: {
-        _eq: "Featured",
+        _eq: 'Featured',
       },
     },
   });
 
   return (
-    <div className="bg-white py-36 max-w-7xl mx-auto">
+    <div className="mx-auto max-w-7xl bg-white py-36">
       <main className="isolate">
-        <BlogFeatured posts={featuredPosts ?? []} />
-        <BlogList posts={posts ?? []} />
+        <BlogFeatured articles={featuredArticles ?? []} />
+        <BlogList articles={articles ?? []} />
       </main>
     </div>
   );

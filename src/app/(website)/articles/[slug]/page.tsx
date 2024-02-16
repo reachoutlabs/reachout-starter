@@ -1,26 +1,31 @@
-import client from "@/lib/reachout";
-import Post from "./post";
-import { Article } from "@/components/types/schema";
+import client from '@/lib/reachout';
+import { Metadata } from 'next';
+import Article from './article';
 
 export async function generateStaticParams() {
-  const posts = await client.readItems("Sample_content", {
-    fields: ["slug"],
+  const articles = await client.readItems('Sample_content', {
+    fields: ['slug'],
   });
 
   return (
-    posts?.map((post) => ({
-      slug: post.slug,
+    articles?.map((article) => ({
+      slug: article.slug,
     })) || []
   );
 }
 
-type PostPageProps = {
+type ArticlePageProps = {
   params: { slug: string };
 };
 
-export default async function Article({ params }: PostPageProps) {
-  const posts = await client.readItems("Sample_content", {
-    fields: ["*"],
+export const metadata: Metadata = {
+  title: 'ReachOut Starter Kit',
+  description: 'Next.js starter kit for content and marketing websites',
+};
+
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const articles = await client.readItems('Sample_content', {
+    fields: ['*'],
     filter: {
       slug: {
         _eq: params.slug,
@@ -29,9 +34,9 @@ export default async function Article({ params }: PostPageProps) {
   });
 
   return (
-    <div className="bg-white py-36 max-w-7xl mx-auto">
+    <div className="mx-auto max-w-7xl bg-white py-36">
       <main className="isolate">
-        <Post post={posts ? posts[0] : null} />
+        <Article article={articles ? articles[0] : null} />
       </main>
     </div>
   );

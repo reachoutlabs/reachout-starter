@@ -1,50 +1,59 @@
-import Hero from "@/components/hero";
-import BlogFeatured from "@/components/blogFeatured";
-import BlogList from "@/components/blogList";
-import Values from "@/components/values";
-import LogoCloud from "@/components/logoCloud";
-import PrimaryFeatures from "@/components/primaryFeatures";
-import SecondaryFeatures from "@/components/secondaryFeatures";
-import NewsletterSignup from "@/components/newsletterSignup";
-import Pricing from "@/components/pricing";
-import Faq from "@/components/faq";
-import GettingStarted from "@/components/gettingStarted";
-import CaseStudiesHomeList from "@/components/caseStudies";
-import client from "@/lib/reachout";
+import BlogFeatured from '@/components/BlogFeatured';
+import BlogList from '@/components/BlogList';
+import CaseStudiesList from '@/components/CaseStudiesList';
+import Faq from '@/components/Faq';
+import GettingStarted from '@/components/GettingStarted';
+import Hero from '@/components/Hero';
+import LogoCloud from '@/components/LogoCloud';
+import NewsletterSignup from '@/components/NewsletterSignup';
+import Pricing from '@/components/Pricing';
+import PrimaryFeatures from '@/components/PrimaryFeatures';
+import SecondaryFeatures from '@/components/SecondaryFeatures';
+import Values from '@/components/Values';
+import client from '@/lib/reachout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'ReachOut Starter Kit',
+  description: 'Next.js starter kit for content and marketing websites',
+};
 
 export default async function Home() {
-  const posts = await client.readItems("Sample_content", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+  const articles = await client.readItems('Sample_content', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
+    limit: 5,
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
       tag: {
-        _neq: "Featured",
+        _neq: 'Featured',
       },
     },
   });
 
-  const featuredPosts = await client.readItems("Sample_content", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+  const featuredArticles = await client.readItems('Sample_content', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
+    limit: 2,
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
       tag: {
-        _eq: "Featured",
+        _eq: 'Featured',
       },
     },
   });
 
-  const caseStudies = await client.readItems("Sample_case_studies", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+  const caseStudies = await client.readItems('Sample_case_studies', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
+    limit: 2,
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
     },
   });
@@ -54,10 +63,10 @@ export default async function Home() {
       <main className="isolate">
         <Hero />
         <LogoCloud />
-        <BlogFeatured posts={featuredPosts ?? []} />
-        <BlogList posts={posts ?? []} />
+        <BlogFeatured articles={featuredArticles ?? []} />
+        <BlogList articles={articles ?? []} />
         <Values />
-        <CaseStudiesHomeList caseStudies={caseStudies ?? []} />
+        <CaseStudiesList caseStudies={caseStudies ?? []} />
         <NewsletterSignup />
         <PrimaryFeatures />
         <SecondaryFeatures />
@@ -69,4 +78,4 @@ export default async function Home() {
   );
 }
 
-export const revalidate = parseInt(process.env.NEXT_ISR_REVALIDATE ?? "60", 10);
+export const revalidate = parseInt(process.env.NEXT_ISR_REVALIDATE ?? '60', 10);

@@ -1,21 +1,26 @@
-import client from "@/lib/reachout";
-import CaseStudiesHero from "@/components/case-studies/caseStudiesHero";
-import CaseStudiesList from "@/components/case-studies/caseStudiesList";
+import CaseStudiesHero from '@/components/case-studies/CaseStudiesHero';
+import CaseStudiesList from '@/components/case-studies/CaseStudiesList';
+import client from '@/lib/reachout';
+import { Metadata } from 'next';
 
-export default async function CaseStudies() {
+export const metadata: Metadata = {
+  title: 'ReachOut Starter Kit',
+  description: 'Next.js starter kit for content and marketing websites',
+};
 
-  const caseStudies = await client.readItems("Sample_case_studies", {
-    fields: ["*"],
-    sort: ["-publishedDate"],
+export default async function CaseStudiesPage() {
+  const caseStudies = await client.readItems('Sample_case_studies', {
+    fields: ['*'],
+    sort: ['-publishedDate'],
     filter: {
       status: {
-        _eq: "published",
+        _eq: 'published',
       },
     },
   });
 
   return (
-    <div className="bg-white py-36 max-w-7xl mx-auto">
+    <div className="mx-auto max-w-7xl bg-white py-36">
       <main className="isolate">
         <CaseStudiesHero />
         <CaseStudiesList caseStudies={caseStudies ?? []} />
