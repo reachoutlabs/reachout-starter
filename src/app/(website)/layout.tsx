@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { ReachoutPageTracker } from '@/components/ReachoutPageTracker';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from './provides';
@@ -17,6 +18,7 @@ export default function RootLayout({
         <Header />
         <body className={inter.className}>{children}</body>
         <Footer />
+        <ReachoutPageTracker />
       </Providers>
     </html>
   );
