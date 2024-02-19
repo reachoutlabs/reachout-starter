@@ -27,7 +27,13 @@ export type CaseStudy = {
   project_url: string;
 };
 
+export type Recipient = {
+  email: string;
+  name?: string;
+};
+
 export type Schema = {
   Sample_content: Article[];
   Sample_case_studies: CaseStudy[];
+  Sample_recipients: Recipient[];
 };
