@@ -1,34 +1,37 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 const tiers = [
   {
-    name: 'Web',
-    id: 'web',
-    href: '#',
-    priceMonthly: 'from $9',
+    name: 'Starter',
+    id: 'starter',
+    href: 'https://github.com/reachoutlabs/reachout-starter',
+    priceMonthly: 'free',
     description:
-      'Track website visits, identify users, trigger events, fetch data and personalize pages.',
+      'Build a Next.js web app faster. Integrate with ReachOut.',
     features: [
-      'Unlimited data hosting',
-      'Unlimited CMS tables',
-      'Recipient-level analytics',
-      'First-party library',
-      'Lightweight React and JS versions',
+      'Web analytics',
+      'ISR',
+      'Content collections',
+      'Newsletter subscription form',
+      'TailwindCSS',
     ],
+    cta: 'Download'
   },
   {
-    name: 'Email',
-    id: 'email',
-    href: '#',
-    priceMonthly: 'from $59',
+    name: 'Pro',
+    id: 'pro',
+    href: 'https://reachout.marketing/checkout/buy/4d3dcaca-b968-4c19-8394-ba04ff620897',
+    priceMonthly: '$149',
     description:
-      'Automate triggered emails, create newsletter campaigns, send mass emails to user segments.',
+      'For professional websites with content restrictions, paywall, user authentication, website payments.',
     features: [
-      'DKIM, SPF and DMARC',
-      'High deliverability',
-      'Email analytics',
-      'Secure and privacy-first user tracking',
+      'Content paywall',
+      'User authentication with Auth.js and ReachOut',
+      'Website payments with Lemonsqueezy',
+      'Lifetime purchase for v1.x',
     ],
+    cta: 'Join waiting list'
   },
 ];
 
@@ -39,17 +42,15 @@ export default function Pricing() {
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-lg font-bold uppercase leading-7 text-purple-600">
-              ReachOut Pricing
+              Pricing
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Web and email volume pricing
+              ReachOut Starter
             </p>
           </div>
           <div className="relative mt-6">
             <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
-              ReachOut starter kit is free to use forever.
-              <br />
-              PRO is a $149 lifetime purchase.
+              Fork the ReachOut Starter kit to deploy a Next.js app faster and integrate with ReachOut out of the box.
             </p>
             <svg
               viewBox="0 0 1208 1024"
@@ -91,9 +92,6 @@ export default function Pricing() {
                         <span className="text-5xl font-bold tracking-tight text-gray-900">
                           {tier.priceMonthly}
                         </span>
-                        <span className="text-base font-semibold leading-7 text-gray-600">
-                          /month
-                        </span>
                       </div>
                       <p className="mt-6 text-base leading-7 text-gray-600">
                         {tier.description}
@@ -113,34 +111,34 @@ export default function Pricing() {
                         ))}
                       </ul>
                     </div>
-                    <a
-                      href="https://app.reachoutapp.io/signup"
+                    <Link
+                      href={tier.href}
                       target="_blank"
                       aria-describedby={tier.id}
                       className="mt-8 block rounded-md bg-purple-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
                     >
-                      Get started today
-                    </a>
+                      {tier.cta}
+                    </Link>
                   </div>
                 ))}
                 <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
                   <div className="lg:min-w-0 lg:flex-1">
                     <h3 className="text-lg font-semibold leading-8 tracking-tight text-purple-600">
-                      Enterprise
+                      ReachOut
                     </h3>
                     <p className="mt-1 text-base leading-7 text-gray-600">
-                      Deploy the ReachOut CMS and database on-premises or
-                      dedicated servers. Retain administrative access to your
-                      content and user data. Connect BI tools such as Metabase.
-                      Starting at $1,000 / month.
+                      Deploy the ReachOut CMS and database on a hosted dedicated infrastructure or
+                      on-premises. Retain administrative access to your
+                      content and user data. Pay as you grow based on web and email volume.
                     </p>
                   </div>
-                  <a
-                    href="mailto:enterprise@reachoutapp.io"
+                  <Link
+                    href="https://reachoutapp.io"
                     className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-purple-600 ring-1 ring-inset ring-purple-200 hover:ring-purple-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+                    target='_blank'
                   >
-                    Enquire <span aria-hidden="true">&rarr;</span>
-                  </a>
+                    Discover <span aria-hidden="true">&rarr;</span>
+                  </Link>
                 </div>
               </div>
             </div>
