@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.55)(react@18.2.0)
   '@reachoutapp/sdk':
-    specifier: ^0.9.10
-    version: 0.9.10
+    specifier: ^0.14.7
+    version: 0.14.7
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -386,8 +386,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@reachoutapp/sdk@0.9.10:
-    resolution: {integrity: sha512-kOX0VSklrNlyWcxYwJ7G6H5+U06ayHD4b/ST0UWOmRYkiKeelNxtculjriUFrFGnh3YQCw7SLEaifpVU6RsPrw==}
+  /@reachoutapp/sdk@0.14.7:
+    resolution: {integrity: sha512-ic4uV0IHxOs2p+quTl66VZ4nHR1Q7NFCmFAYeEZN8QPlKhX7PmZm/myXzpsWXrmb7WV/sG5v1T3KzFxijTiErg==}
     dev: false
 
   /@rushstack/eslint-patch@1.7.2:

@@ -9,8 +9,6 @@ const client = createReachoutClient<Schema>({
   url: REACHOUT_URL,
   token: REACHOUT_TOKEN,
   websiteId: REACHOUT_TOUCHPOINT,
-  trackLink: false,
-  trackPageView: false,
 });
 
 export default client;
